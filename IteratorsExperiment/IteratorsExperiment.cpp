@@ -73,24 +73,24 @@ int main()
 
   vector<string>::iterator iiii;
 
-  //   for (vector<string>::iterator it = v.begin(), end = v.end(); it != end; it++)
-  //   {
-  //     std::cout << *it << std::'\n';
-  //   }
+//   for (vector<string>::iterator it = v.begin(), end = v.end(); it != end; it++)
+//   {
+//     std::cout << *it << std::'\n';
+//   }
 
-  cout << "\n\tThe default implementation" << '\n';
+  cout << "\n\tThe default implementation." << '\n';
   for (MyIterator it(v.begin()); it != MyIterator(v.end()); it++)
   {
     cout << *it << '\n';
   }
 
-  cout << '\n' << "\n\tWith prefix incrementation" << '\n';
+  cout << '\n' << "\n\tWith prefix incrementation, 'end()' is called at every iteration." << '\n';
   for (MyIterator it(v.begin()); it != MyIterator(v.end()); ++it)
   {
     cout << *it << '\n';
   }
 
-  cout << '\n' << "\n\tWith prefix incrementation" << '\n';
+  cout << '\n' << "\n\tWith prefix incrementation, 'end()' is cached." << '\n';
   for (MyIterator it(v.begin()), end(v.end()); it != end; ++it)
   {
     cout << *it << '\n';
